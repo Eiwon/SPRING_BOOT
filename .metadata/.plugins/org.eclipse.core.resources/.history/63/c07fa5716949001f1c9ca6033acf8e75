@@ -1,0 +1,9 @@
+package com.mokcoding.mysite.persistence;
+
+import org.springframework.data.repository.ListCrudRepository;
+
+import com.mokcoding.mysite.domain.Attach;
+
+public interface AttachRepository extends ListCrudRepository<Attach, Integer>{
+
+}

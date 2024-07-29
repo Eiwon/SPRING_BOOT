@@ -1,0 +1,5 @@
+package com.mokcoding.mysite.controller;
+
+public class BoardController {
+
+}

@@ -1,0 +1,16 @@
+spring.application.name=MyWebSite
+# DB 연결 url
+spring.datasource.url=jdbc:mysql://localhost:3306/customer
+# DB 사용자 아이디
+spring.datasource.username=root
+# DB 사용자 비밀번호
+spring.datasource.password=mysql
+
+# Hibernate의 DDL(Data Definition Language) 자동 생성 동작을 설정하는 속성
+spring.jpa.hibernate.ddl-auto=update
+# Hibernate SQL 쿼리 콘솔에 출력
+spring.jpa.show-sql=true
+# 초기 security login 아이디 비밀번호 적용
+# spring.security.user.name=user
+# spring.security.user.password=1234
+upload.path=C:\\upload\\mysite

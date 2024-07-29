@@ -1,0 +1,5 @@
+package com.mokcoding.mysite.domain;
+
+public class Board {
+
+}

@@ -1,6 +1,7 @@
 package com.mokcoding.mysite.domain;
 
 import java.time.LocalDateTime;
+import java.util.Date;
 
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -11,15 +12,11 @@ import lombok.ToString;
 @Getter 
 @Setter
 @ToString 
-public class AttachDTO {
-	
-	
-	private int attachId;
+public class ReplyDTO {
+	private int replyId;
 	private int boardId;
-	private String attachPath;
-	private String attachRealName;
-	private String attachChgName;
-	private String attachExtension;
-	private LocalDateTime attachDateCreated;
+	private String memberId;
+	private String replyContent;
+	private LocalDateTime replyDateCreated;
 	
-}
+} // end ReplyDTO

@@ -15,20 +15,20 @@ import lombok.ToString;
 @ToString 
 public class BoardDTO {
 
-   private int boardId; 
-   private String boardTitle; 
-   private String boardContent;
-   private String memberId; 
-   private LocalDateTime boardDateCreated; 
-   private int replyCount;
-   
-   private List<AttachDTO> attachList;
-   
-   public List<AttachDTO> getAttachList() {
-      if(attachList == null) {
-         attachList = new ArrayList<AttachDTO>();
-      }
-      return attachList;
-   }
-   
+	private int boardId; 
+	private String boardTitle; 
+	private String boardContent;
+	private String memberId; 
+	private LocalDateTime boardDateCreated; 
+	private int replyCount;
+	
+	private List<AttachDTO> attachList;
+	
+	public List<AttachDTO> getAttachList() {
+		if(attachList == null) {
+			attachList = new ArrayList<AttachDTO>();
+		}
+		return attachList;
+	}
+	
 } // end BoardDTO

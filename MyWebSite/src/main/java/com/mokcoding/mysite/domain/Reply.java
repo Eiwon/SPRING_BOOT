@@ -1,6 +1,6 @@
 package com.mokcoding.mysite.domain;
 
-import java.util.Date;
+import java.time.LocalDateTime;
 
 import org.hibernate.annotations.CreationTimestamp;
 
@@ -22,9 +22,8 @@ public class Reply {
    private String memberId;
    private String replyContent;
    
-   @Column(name = "regDate", nullable = false, updatable = false)
+   @Column(name = "regDate", nullable = false, updatable = true)
    @CreationTimestamp
-   private Date replyDateCreated;
+   private LocalDateTime replyDateCreated;
    
 } // end Reply
-

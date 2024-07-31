@@ -64,7 +64,7 @@ $(document).ready(function(){
 		for(var i = 0; i < files.length; i++) {
 			formData.append("files", files[i]); 
 		}
-		
+				
 		$.ajax({
 			type : 'post', 
 			url : '../image', 
@@ -119,12 +119,8 @@ $(document).ready(function(){
 
 				// list 문자열 image-list div 태그에 적용
 				$('.image-list').html(list);
-			}, // end success
-			error : function(request, status, error) {
-				console.log(request);
-				console.log(status);
-				console.log(error);
-			}
+			} // end success
+		
 		}); // end $.ajax()
 		
 	}); // end image-drop()

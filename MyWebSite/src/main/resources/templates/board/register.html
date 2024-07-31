@@ -18,7 +18,7 @@ li {
 </style>
 </head>
 <body>
-   <div th:fragment="common/header.html"></div>
+   <div th:include="common/header.html"></div>
    <h2>글 작성 페이지</h2>
    <form id="registerForm" action="#" th:action="@{register}" th:object="${boardDTO}" method="POST">
       <!-- input 태그의 name은 dto의 멤버 변수 이름과 동일하게 작성 -->
@@ -26,7 +26,6 @@ li {
          <p>제목 :</p>
          <input type="text" id="boardTitle" th:field="*{boardTitle}" placeholder="제목 입력"
             maxlength="20" >
-			<!--th:field = name + value-->
       </div>
       <div>
          <p>작성자 :</p>
@@ -69,11 +68,11 @@ li {
    <button id="registerBoard">등록</button>
 
    <script th:src="@{/js/image.js}"></script>
-   <script   th:src="@{/js/attach.js}"></script>
+   <script th:src="@{/js/attach.js}"></script>
    
    <div th:include="common/footer.html"></div>
 
-   <script>
+   <script th:inline="javascript">
       // ajaxSend() : AJAX 요청이 전송되려고 할 때 실행할 함수를 지정
       // ajax 요청을 보낼 때마다 CSRF 토큰을 요청 헤더에 추가하는 코드
       $(document).ajaxSend(function(e, xhr, opt){

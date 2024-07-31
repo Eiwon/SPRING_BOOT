@@ -1,7 +1,7 @@
 package com.mokcoding.mysite.domain;
 
 import java.io.Serializable;
-import java.util.Date;
+import java.time.LocalDateTime;
 
 import org.hibernate.annotations.CreationTimestamp;
 
@@ -16,15 +16,15 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 public class Member implements Serializable{
 
-   private static final long serialVersionUID = 1L;
-   
-   @Id
-   private String memberId;
-   private String memberPw;
-   private String memberName;
-   @Column(name = "regDate", nullable = false, updatable = false)
-   @CreationTimestamp
-   private Date regDate;
-   private int enabled;
+	private static final long serialVersionUID = 1L;
+	
+	@Id
+	private String memberId;
+	private String memberPw;
+	private String memberName;
+	
+	@Column(name = "regDate", nullable = false, updatable = true)
+	@CreationTimestamp
+	private LocalDateTime regDate;
+	private int enabled;
 }
-

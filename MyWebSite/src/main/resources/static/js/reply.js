@@ -44,9 +44,9 @@ $(document).ready(function(){
 	
 	// 게시판 댓글 전체 가져오기
 	function getAllReply() {
-		var boardId = $('#boardId').val();
-		
-		var url = '../reply/all/' + boardId;
+		let boardId = $('#boardId').val();
+		console.log(boardId);
+		let url = '../reply/all/' + boardId;
 		$.getJSON(
 			url, 		
 			function(data) {
